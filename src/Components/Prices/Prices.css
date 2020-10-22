@@ -1,0 +1,50 @@
+.price-container{
+    margin: 3rem 1rem;
+    font-family: Basic;
+
+
+}
+.car-slider{
+    margin: 1rem 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:  flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+    height: 12rem;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.car{
+height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    padding: 1rem;
+
+}
+
+.car:hover{
+    background: blanchedalmond;
+    transform: scale(1.1) translateY(-10px);
+}
+.car .icon{
+    width: 12rem;
+    max-width: 150px;
+
+}
+.car .title{
+    color: var(--main-orange-color);
+    line-height: .9rem;
+
+}
+.car .sub-title{
+   font-size: .9rem;
+    line-height: .9rem;
+}
+

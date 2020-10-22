@@ -1,0 +1,35 @@
+.welcoming-section {
+    padding: 1rem 0;
+    position: relative;
+    height: 7rem;
+    margin: 0 1rem;
+}
+
+.welcoming-title {
+    font-size: var(--font-size-level-1);
+}
+
+.welcoming-section::after {
+    content: "Emergency calls 24/7";
+    position: absolute;
+    right: 2%;
+    height: 2.5rem;
+    border: 2px solid var(--main-text-color);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .3rem;
+    box-shadow: 4px 5px 0px var(--main-orange-color);
+}
+
+@media (min-width: 768px) {
+    .welcoming-section::after {
+        bottom: unset;
+        height: 50%;
+        top: 40%;
+        display: flex;
+
+    }
+
+}

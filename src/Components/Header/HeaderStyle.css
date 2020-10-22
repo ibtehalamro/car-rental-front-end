@@ -1,0 +1,138 @@
+.top-header {
+    position: relative;
+    z-index: 300;
+    top: 0;
+}
+
+.header-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* styling the ul which contains the header elements as li*/
+.header-content-wrapper {
+    position: absolute;
+
+    list-style: none;
+    padding: 1rem;
+    font-size: .8rem;
+    color: var(--main-text-color); /*this color will be inherited to the links */
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background: #f1f1f1;
+    right: 0;
+    top: 100%;
+
+}
+
+.show {
+    width: 100%;
+    height: 100vh;
+    background: #f1f1f1;
+    right: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-item {
+    margin: 0 1rem;
+}
+
+.header-menu {
+    margin: 10px 10px;
+    display: block;
+
+}
+
+.header-menu img {
+    width: 1rem;
+}
+
+/*.header-item:nth-child(1) {*/
+/*    margin-right: auto;*/
+/*}*/
+
+/* styling the logo*/
+.logo {
+    position: relative; /*to position the ::before*/
+    width: max-content; /*remove this when flex*/
+    padding-left: 1.7rem; /*this padding to make room for the before icon*/
+    display: flex;
+    justify-content: center;
+    line-height: 1.5rem;
+}
+
+
+.logo::before {
+    content: "";
+    background: url('../../assets/images/icons/car-service.svg') no-repeat;
+    background-size: cover;
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: 0em;
+}
+
+/*Styling each link*/
+.header-link {
+    text-decoration: inherit;
+    color: inherit;
+    position: relative;
+}
+
+.header-link::after {
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    background: var(--main-text-color);
+
+    content: '';
+    transition: all .5s linear;
+
+}
+
+.active::after {
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background: var(--main-text-color);
+    content: '';
+}
+
+.header-link:hover.header-link::after {
+    width: 100%;
+
+}
+
+@media (min-width: 768px) {
+    .header-menu { /*burger menu is hidden in the screen >=768px*/
+        display: none;
+    }
+
+    .header-content-wrapper {
+
+        font-size: var(--font-size-normal);
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        color: var(--main-text-color); /*this color will be inherited to the links */
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
+
+        height: auto;
+        background: unset;
+        right: unset;
+    }
+}

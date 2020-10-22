@@ -1,0 +1,26 @@
+:root{
+--font-size-normal:1rem;
+--font-size-level-1:1.3rem;
+--font-size-level-2:1.5rem;
+--font-size-level-3:1.5rem;
+--font-size-level-4:1.5rem;
+}
+
+
+/*Colors */
+:root{
+    --main-text-color:#211B1B;
+    --main-orange-color: #fb8d21;
+    --main-brown-color: #211B1B;
+}
+
+
+@media (min-width: 768px) {
+    :root{
+        --font-size-normal:1rem;
+        --font-size-level-1:1.5rem;
+        --font-size-level-2:2rem;
+        --font-size-level-3:3rem;
+        --font-size-level-4:4rem;
+    }
+}

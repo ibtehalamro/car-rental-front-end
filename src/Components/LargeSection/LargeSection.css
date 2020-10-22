@@ -1,0 +1,74 @@
+.large-section {
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(310deg, #FFFFFF 0%, #FFFFFF 24%, #DD7B1B 20%, #DD7B1B 55%, #FFFFFF 55%, #FFFFFF 100%) top;
+    background-size: cover;
+    position: relative;
+    top: -4rem;
+}
+
+/*styling the image at the main area*/
+.large-image {
+    width: 70vw;
+    filter: drop-shadow(4px 7px 5px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    bottom: -10vh;
+    left: 25%;
+    transition: all 1s ease-in-out;
+    animation: load2 2s linear;
+
+}
+
+.large-image:hover {
+    transform: translate(10px, 10px);
+}
+
+.large-section .title {
+    max-font-size: 3vw;
+    min-font-size: 2vw;
+    font-size: var(--font-size-level-3);
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    animation: load 2s linear;
+}
+
+@keyframes load {
+    0% {
+        transform: skewX(20deg) translateX(-20px);
+    }
+    50% {
+
+        transform: skewX(10deg) translateX(20px);
+    }
+    100% {
+
+        transform: skewX(0deg) translateX(0px);
+    }
+}
+
+@keyframes load2 {
+    0% {
+
+        transform: translateX(-20px);
+    }
+    50% {
+
+        transform: translateX(20px);
+    }
+    100% {
+
+        transform: translateX(0px);
+    }
+}
+
+@media (min-width: 768px) {
+    .large-section {
+
+        height: 90vh;
+    }
+
+    .large-image {
+        width: 60vw;
+    }
+}
