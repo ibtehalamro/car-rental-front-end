@@ -31,7 +31,21 @@ height: 100%;
 
 .car:hover{
     background: blanchedalmond;
-    transform: scale(1.1) translateY(-10px);
+    animation: scale .7s ease-in ;
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes scale {
+    from{
+        transform: scale(1) ;
+
+    }to{
+             transform: scale(1.1)  ;
+
+         }
 }
 .car .icon{
     width: 12rem;

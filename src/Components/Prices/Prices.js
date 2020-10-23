@@ -7,7 +7,7 @@ const Prices = () => {
     return (
         <div className="price-container">
             <h3 className="price-title">Prices:</h3>
-            <ul className="car-slider">
+            <ul className="cvar-slider">
                <ScrollBox>
                    <li className="car">
                        <CarCard icon={'car1'}/>
